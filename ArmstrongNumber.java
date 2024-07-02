@@ -19,18 +19,5 @@ public class ArmstrongNumber {
         // Close the scanner
         scanner.close();
     }
-
-    // Function to check whether a number is an Armstrong number
-    private static boolean isArmstrongNumber(int number) {
-        int originalNumber = number;
-        int numberOfDigits = String.valueOf(number).length();
-        int sum = 0;
-
-        while (number > 0) {
-            int digit = number % 10;
-            sum += Math.pow(digit, numberOfDigits);
-            number /= 10;
-        }
-        return sum == originalNumber;
     }
 }
