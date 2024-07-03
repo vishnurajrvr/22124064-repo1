@@ -6,7 +6,7 @@ public class ArmstrongNumber {
         Scanner scanner = new Scanner(System.in);
 
         // Get the input number from the user
-        System.out.print("Enter a number: ");
+        System.out.print("Enter a value: ");
         int number = scanner.nextInt();
 
         // Check and display whether the number is Armstrong or not
