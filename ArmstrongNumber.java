@@ -6,7 +6,7 @@ public class ArmstrongNumber {
         Scanner scanner = new Scanner(System.in);
 
         // Get the input number from the user
-        System.out.print("Enter a value: ");
+        System.out.print("Enter a number: ");
         int number = scanner.nextInt();
 
         // Check and display whether the number is Armstrong or not
@@ -19,5 +19,19 @@ public class ArmstrongNumber {
         // Close the scanner
         scanner.close();
     }
+
+    // Function to check whether a number is an Armstrong number
+    private static boolean isArmstrongNumber(int number) {
+        int originalNumber = number;
+        int numberOfDigits = String.valueOf(number).length();
+        int sum = 0;
+
+        while (number > 0) {
+            int digit = number % 10;
+            sum += Math.pow(digit, numberOfDigits);
+            number /= 10;
+        }
+
+        return sum == originalNumber;
     }
 }
